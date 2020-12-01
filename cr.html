@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+      <body background="p.jpeg">
+    <div id="auth">
+        <!-- Login Template -->
+        <template v-if="auth===true">
+          <div class="d-flex justify-content-center mt-5">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Login</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Silakan login</h6>
+                  <div class="form-group">
+                    <input class="form-control form-control-sm" type="text" placeholder="Username">
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control form-control-sm" type="text" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-sm"><a href="https://supercell.com/en/games/clashofclans/"><font color="white">Login</font></a></button>
+                  </div>
+                <a href="=#" class="card-link" v-on:click="auth = false">Register</a></a>
+              </div>
+            </div>
+          </div>
+        </template>https://supercell.com/en/games/clashofclans/
+        <!-- End of Login Template -->
+
+        <!-- Register Template -->
+        <template v-else-if="auth===false">
+          <div class="d-flex justify-content-center mt-5">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">Register</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Silakan Register</h6>
+                  <div class="form-group">
+                    <input class="form-control form-control-sm" type="text" placeholder="E - Mail">
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-sm"><a href="https://supercell.com/en/games/clashofclans/"><font color="white">Register</font></a></button>
+                  </div>
+                <a href="#" class="card-link" v-on:click="auth = true">Login</a>
+              </div>
+            </div>
+          </div>
+        </template>
+        <!-- End of Register Template -->
+    </div>
+
+    <script type="text/javascript">
+    new Vue({
+        el: '#auth',
+        data: {
+            auth: true
+        }
+    })
+    </script>
+  </body>
+</html>
